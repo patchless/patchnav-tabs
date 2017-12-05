@@ -1,0 +1,91 @@
+
+.Hypertabs {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Hypertabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.Hypertabs > section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.Hypertabs > section > .page {
+  height: 100%;
+}
+
+.Hypertabs > nav > .tabs {
+  display: flex; flex-direction: row;
+}
+
+.Hypertabs .tab {
+  max-width: 200px;
+  width: 100%;
+  border-left: 1px black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  background: grey;
+}
+
+.Hypertabs > nav a {
+  padding: 10px;
+}
+
+.Hypertabs > nav .close {
+  margin-top: -10px;
+}
+
+.Hypertabs > nav .link {
+  max-width: 120px;
+  min-width: 0px;
+  width: 100%;
+}
+
+.Hypertabs > nav .-selected {
+  border: 10px black;
+  background: lightgrey;
+}
+
+.hyperloadmore__scroller {
+  overflow: scroll;
+  height: 100%;
+}
+
+* {
+  word-break; break-word;
+}
+
+body {
+  margin: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

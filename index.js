@@ -3,6 +3,8 @@ var h = require('hyperscript')
 var open = require('open-external')
 var isElectron = require('is-electron')
 var HyperScroll = require('hyperscroll')
+var fs = require('fs')
+var path = require('path')
 
 function ancestorAnchor (el) {
   if(!el) return
@@ -81,7 +83,8 @@ exports.create = function (api) {
         }
 
         if (isElectron()) {
-          var electron = require('electron')
+          var _require = require
+          var electron = _require('electron')
           window.addEventListener('mousewheel', ev => {
             if (ev.ctrlKey) {
               const direction = (ev.deltaY / Math.abs(ev.deltaY))
@@ -91,7 +94,7 @@ exports.create = function (api) {
         }
 
         tabs.appendChild(
-          h('style', {innerText: require('fs').readFileSync(require('path').join(__dirname, 'style.css'))})
+          h('style', {innerText: fs.readFileSync(path.join(__dirname, 'style.css'))})
         )
 
         return tabs
@@ -102,4 +105,5 @@ exports.create = function (api) {
     }
   }
 }
+
 
